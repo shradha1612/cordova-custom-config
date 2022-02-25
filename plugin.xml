@@ -11,6 +11,16 @@
     <engines>
         <engine name="cordova" version=">=3.0.0" />
     </engines>
+    
+    <preference name="Affinity" default="false"/>
+        <platform name="android">
+            <edit-config file="AndroidManifest.xml" target="/manifest/application" mode="merge">
+                 <application>
+                    <activity android:taskAffinity=""/>
+                  </application>
+             </edit-config>
+        </platform>
+    
 
     <repo>https://github.com/dpa99c/cordova-custom-config.git</repo>
     <issue>https://github.com/dpa99c/cordova-custom-config/issues</issue>
